@@ -1,0 +1,23 @@
+server:
+  port: 8093
+spring:
+  main:
+    allow-bean-definition-overriding: true
+    allow-circular-references: true
+  servlet:
+    multipart:
+      max-file-size: 10MB
+  application:
+    #    服务名
+    name: editor
+  # 数据库配置
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://10.1.10.106/editor?serverTimezone=Asia/Shanghai&characterEncoding=utf-8
+    username: root
+    password: 123456
+  data:
+    redis:
+      host: 10.1.10.106
+      port: 6379
+      password: 123456
