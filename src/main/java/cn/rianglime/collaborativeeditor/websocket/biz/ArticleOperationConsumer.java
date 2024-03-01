@@ -33,7 +33,7 @@ public class ArticleOperationConsumer {
             @Override
             public void run() {
                 try {
-                    //do Something
+                    // do Something
                     consume();
                 } catch (Exception e) {
                     e.printStackTrace();
