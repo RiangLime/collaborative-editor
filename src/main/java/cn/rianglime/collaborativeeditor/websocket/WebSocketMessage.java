@@ -15,5 +15,6 @@ import java.io.Serializable;
 public class WebSocketMessage implements Serializable {
     private Integer articleId;
     private Integer userId;
+    private Boolean isQuery = false;
     private Operation operation;
 }

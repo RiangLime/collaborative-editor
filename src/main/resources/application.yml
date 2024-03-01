@@ -1,5 +1,6 @@
 server:
   port: 8093
+  editor-port: 8094
 spring:
   main:
     allow-bean-definition-overriding: true
@@ -13,7 +14,7 @@ spring:
   # 数据库配置
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://10.1.10.106/editor?serverTimezone=Asia/Shanghai&characterEncoding=utf-8
+    url: jdbc:mariadb://10.1.1.106/editor?serverTimezone=Asia/Shanghai&characterEncoding=utf-8
     username: root
     password: 123456
   data:

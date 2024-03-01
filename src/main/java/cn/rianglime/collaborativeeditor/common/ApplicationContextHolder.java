@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @ClassName: ApplicationContextHolder
- * @Description: 全局容器
+ * @Description: global spring context
  * @Author: Lime
  * @Date: 2023/7/12 14:14
  */

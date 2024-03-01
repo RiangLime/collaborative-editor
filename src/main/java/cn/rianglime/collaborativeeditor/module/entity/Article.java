@@ -9,7 +9,7 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * 用户第三方登录授权表
+ *
  * @TableName Article
  */
 @TableName(value ="Article")

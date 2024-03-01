@@ -5,7 +5,7 @@ import cn.rianglime.collaborativeeditor.module.operation.Operation;
 
 /**
  * @ClassName: ArticleHandler
- * @Description: TODO
+ * @Description: base article handler [map operations to db
  * @Author: Lime
  * @Date: 2024/2/29 14:55
  */
@@ -14,16 +14,10 @@ public abstract class ArticleHandler {
 
     public abstract String query(Integer articleId);
 
-    public static ArticleHandler getHandler(Operation operation, boolean isQuery) {
-
-
+    public static ArticleHandler getHandler(boolean isQuery) {
         return isQuery ?
                 ApplicationContextHolder.getContext().getBean(ArticleQueryHandler.class) :
-                switch (operation.getOperationType()) {
-            case 1 -> ApplicationContextHolder.getContext().getBean(ArticleAddHandler.class);
-            case 2 -> ApplicationContextHolder.getContext().getBean(ArticleDeleteHandler.class);
-            default -> throw new RuntimeException("unknown operation");
-        };
+                ApplicationContextHolder.getContext().getBean(ArticleDeltaHandler.class);
     }
 
 }

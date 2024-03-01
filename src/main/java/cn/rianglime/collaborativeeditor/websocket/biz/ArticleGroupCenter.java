@@ -12,5 +12,12 @@ import java.util.Map;
 public class ArticleGroupCenter {
 
     public static final Map<Integer,ArticleGroup> ARTICLE_GROUP_MAP = new HashMap<>();
+    public static void stopGroup(int articleId){
+        ArticleGroup articleGroup = ARTICLE_GROUP_MAP.get(articleId);
+        articleGroup.stopConsumer();
+        articleGroup.stopBroadcast();
+        // 置空 析构
+        articleGroup = null;
+    }
 
 }
